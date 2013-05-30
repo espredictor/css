@@ -89,21 +89,19 @@ img{
 }
 
 h1{
-	color: #555555;
+	color: #2b2b2b;
 	font-family: 'Georgia', sans-serif;
-	font-size: 18px;
-	font-weight:bold;
+	font-size: 25px;
 	font-style: italic;
-	margin: 20px 0px 5px 2px;
+	margin: 34px 0px 0px 0px;
 }
 
 h2{
-	color: #585858;
+	color: #2b2b2b;
 	font-family: 'Georgia', sans-serif;
-	font-size: 16px;
-	font-weight:bold;
+	font-size: 25px;
 	font-style: normal;
-	margin: 25px 0px 3px 0px;
+	margin: 40px 0px;
 }
 
 h3,
@@ -112,7 +110,6 @@ h3 a{
 	font-family: 'Georgia', sans-serif;
 	font-size: 18px;
 	margin: 20px 0px 13px 0px;
-	
 }
 
 h3 a{
@@ -152,7 +149,7 @@ p{
 }
 
 a{
-	color: #fa851e;
+	color: #7c7c7c;
 	text-decoration: none;
 	line-height: 21px;
 	-webkit-transition:all 0.3s ease 0s; 
@@ -166,7 +163,7 @@ p a{
 
 a:hover,
 p a:hover{
-	color: #7e7e7e;
+	color: #c20b58;
 	text-decoration: none;
 }
 
@@ -332,6 +329,10 @@ header .container_inner{
 .logo a{
 	position: relative;
 	display: block;
+	visibility: hidden;
+	-webkit-transition:none; 
+	-moz-transition:none; 
+	-o-transition:none;
 }
 
 .logo img{
@@ -960,7 +961,7 @@ nav.main_menu2 ul li:hover a{
 }
 
 .two_columns_66_33 .column2 .column_inner{
-	padding: 0px 0px 0px 200px;
+	padding: 0px 0px 0px 20px;
 }
 
 .two_columns_33_66{
@@ -982,7 +983,7 @@ nav.main_menu2 ul li:hover a{
 }
 
 .two_columns_33_66 .column2 .column_inner{
-	padding: 0px 0px 0px 200px;
+	padding: 0px 0px 0px 20px;
 }
 
 .two_columns_75_25{
@@ -1472,7 +1473,7 @@ blockquote p{
 	display: block;
 	position: relative;
 	float: left;
-	margin: -2px 15px 5px 0px;
+	margin: -2px 15px 5px 0px  !important;
 	background-color: #c20b58;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -1493,8 +1494,16 @@ blockquote p{
 	background-color: #e4e4e4;
 }
 
-.accordion p{
-	padding: 5px 10px 15px 46px;
+.accordion div.accordion_content{
+	padding: 0px 10px 0px 46px;
+	margin: 0px;
+}
+
+.accordion div.accordion_content_inner{
+	padding: 5px 0px 15px 0px;
+}
+
+.accordion p {
 	margin: 0px;
 }
 
@@ -1665,11 +1674,28 @@ blockquote p{
 	background-position: 0px;
 }
 
+.list.circle ul > li {
+	list-style: none outside none;
+	position: relative;
+	background: none;
+}
+
+.list.circle ul > li:before{
+	content: "\2022";
+	position: absolute;
+	left: 0;
+	text-align: center;
+	display: inline-block;	
+	padding: 0px;
+	color: #c20b58;
+}
+/*
 .list.circle ul li{
 	background-image: url(../img/list_circle_img.png);
 	background-position: 0px;
+	background-repeat: no-repeat;
 }
-
+*/
 .button_holder{
 	display: inline-block;
 	position: relative;
@@ -2832,8 +2858,8 @@ table.standard-table.border tr:first-child{
 }
 
 .posts_holder article .text .create,
-.posts_holder3 article .text span,
-.posts_holder2 article .text span{
+.posts_holder3 article .text .create,
+.posts_holder2 article .text .create{
 	margin: 0px 0px 20px 0px;
 	position: relative;
 	display: block;
@@ -2923,7 +2949,7 @@ table.standard-table.border tr:first-child{
 
 .posts_holder2 article h2,
 .posts_holder2 article .text .create,
-.posts_holder2 article .text p,
+.posts_holder2 article .text .text_holder,
 .posts_holder2.post_single h2,
 .post_single article .post_single_text_holder,
 .post_single article .text .create{
